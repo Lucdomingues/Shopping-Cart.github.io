@@ -1,5 +1,6 @@
+const fetch = require('node-fetch');
+
 const fetchProducts = () => {
-  // seu código aqui
 };
 
 if (typeof module !== 'undefined') {
