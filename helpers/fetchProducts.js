@@ -8,7 +8,7 @@ const fetchProducts = async (produtos) => {
     const json = await endereco.json();
     return json;
   } catch (error) {
-    return error;
+    return error.message;
   }
 };
 

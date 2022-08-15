@@ -19,7 +19,11 @@ describe('1 - Teste a função fetchProducts', () => {
     expect(await fetchProducts('computador')).toEqual(computadorSearch);
   });
   test('Verifica se ao receber um parametro vázio retorna uma menssagem de erro!', async () => {
-    expect(await fetchProducts()).reject.toThrowError('You must provide an url');
+    try {
+      await fetchProducts('computador')
+    } catch (error) {
+      expect(error).toThrow('You must provide an url');
+    }
   });
   // fail('Teste vazio');
 });
