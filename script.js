@@ -39,15 +39,14 @@ const createCartItemElement = ({ sku, name, salePrice }) => {
 };
 
 const criarProduto = async () => {
-
   const response = await fetchProducts('computador');
   const obj = await response.results;
   obj.forEach((product) => {
     const { id, title, thumbnail } = product;
-    const desestruturacao = createProductItemElement({ sku: id, name: title, image: thumbnail, });
+    const desestruturacao = createProductItemElement({ sku: id, name: title, image: thumbnail });
     const itens = document.querySelector('.items');
     itens.appendChild(desestruturacao);
   });
-}
+};
 criarProduto();
 window.onload = () => { };

@@ -7,10 +7,13 @@ describe('2 - Teste a função fetchItem', () => {
     expect(fetchItem).toBeInstanceOf(Function);
   });
   test('Verifica se ao passar o parametro `MLB1615760527` fetch é chamado!', async () => {
-    expect(await fetchItem('MLB1615760527')).toBeCalledWith(fetch);
+    await fetchItem('MLB1615760527');
+    expect(fetch).toBeCalled();
   });
   test('Verifica se ao passar o parametro `MLB1615760527` fetch utiliza o endpoint correto!', async () => {
-    expect(await fetchItem('MLB1615760527')).toBeCalledWith('https://api.mercadolibre.com/items/MLB1615760527');
+    const url = 'https://api.mercadolibre.com/items/MLB1615760527'
+    await fetchItem('MLB1615760527')
+    expect(fetch).toBeCalledWith(url);
   });
   test('Verifica se ao passar o parametro `MLB1615760527` retorna o objeto correto!', async () => {
     expect(await fetchItem('MLB1615760527')).toEqual(item);
