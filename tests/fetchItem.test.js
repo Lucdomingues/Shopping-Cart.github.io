@@ -19,7 +19,11 @@ describe('2 - Teste a função fetchItem', () => {
     expect(await fetchItem('MLB1615760527')).toEqual(item);
   });
   test('Verifica se for um parametro vázio retorna uma menssagem de erro!', async () => {
-    expect(await fetchItem()).reject.toThrow('You must provide an url');
+    try {
+      await fetchItem('MLB1615760527');
+    } catch (error) {
+      expect(error).toThrow('You must provide an url');
+    }
   });
   // fail('Teste vazio');
 });
