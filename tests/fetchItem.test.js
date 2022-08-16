@@ -20,10 +20,13 @@ describe('2 - Teste a função fetchItem', () => {
   });
   test('Verifica se for um parametro vázio retorna uma menssagem de erro!', async () => {
     try {
-      await fetchItem('MLB1615760527');
+      await fetchItem();
     } catch (error) {
-      expect(error).toThrow('You must provide an url');
+      expect(error).toEqual(new Error('You must provide an url'));
     }
+  });
+  test('Verifica se recebe o erro caso não tenha parametro!', async () => {
+    expect(await fetchItem()).toThrow();
   });
   // fail('Teste vazio');
 });

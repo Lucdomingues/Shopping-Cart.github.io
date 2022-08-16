@@ -20,9 +20,9 @@ describe('1 - Teste a função fetchProducts', () => {
   });
   test('Verifica se ao receber um parametro vázio retorna uma menssagem de erro!', async () => {
     try {
-      await fetchProducts('computador')
+      await fetchProducts()
     } catch (error) {
-      expect(error).toThrow('You must provide an url');
+      expect(error).toEqual(new Error('You must provide an url'));
     }
   });
   // fail('Teste vazio');

@@ -8,7 +8,7 @@ const fetchItem = async (item) => {
     const response = await requisicao.json();
     return response;
   } catch (error) {
-    return error.message;
+    return error;
   }
 };
 
