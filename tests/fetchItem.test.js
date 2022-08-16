@@ -7,7 +7,7 @@ describe('2 - Teste a função fetchItem', () => {
     expect(fetchItem).toBeInstanceOf(Function);
   });
   test('Verifica se ao passar o parametro `MLB1615760527` fetch é chamado!', async () => {
-    await fetchItem('MLB1615760527');
+    await fetchItem('MLB161576057');
     expect(fetch).toBeCalled();
   });
   test('Verifica se ao passar o parametro `MLB1615760527` fetch utiliza o endpoint correto!', async () => {
