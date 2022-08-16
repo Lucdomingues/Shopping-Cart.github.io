@@ -56,12 +56,12 @@ const botaoCarrinho = async (event) => {
   const destruction = createCartItemElement({ sku: id, name: title, salePrice: price });
   const selecionado = document.querySelector('.cart__items');
   selecionado.appendChild(destruction);
-}
+};
 
 const addEvent = () => {
   const selecao = document.querySelector('.items');
   selecao.addEventListener('click', botaoCarrinho);
-}
+};
 
 window.onload = () => {
   criarProduto();

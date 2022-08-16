@@ -10,7 +10,6 @@ const fetchItem = async (item) => {
   } catch (error) {
     return error.message;
   }
-
 };
 
 if (typeof module !== 'undefined') {
