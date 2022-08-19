@@ -25,7 +25,7 @@ const createProductItemElement = ({ sku, name, image }) => {
 };
 
 const getSkuFromProductItem = (item) => item.querySelector('span.item__sku').innerText;
-
+getSkuFromProductItem();
 const cartItemClickListener = (event) => {
   event.target.remove();
 };
@@ -65,6 +65,7 @@ const addEvent = () => {
 };
 
 window.onload = () => {
+  getSavedCartItems();
   criarProduto();
   addEvent();
 };
