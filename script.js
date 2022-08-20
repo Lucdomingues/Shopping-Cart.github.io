@@ -61,11 +61,11 @@ const botaoCarrinho = async (event) => {
 
 const saveStorage = async () => {
   const itemsCar = await carrinhoOl.innerHTML;
-  await saveCartItems(itemsCar);
+  await saveCartItems(JSON.stringify(itemsCar));
 };
  
 const getSaveStorage = async () => {
-  carrinhoOl.innerHTML = await getSavedCartItems();
+  carrinhoOl.innerHTML = await JSON.parse(getSavedCartItems());
 };
 
 const btnEsvazia = () => {
@@ -76,8 +76,8 @@ const addEvent = () => {
   const btnClear = document.querySelector('.empty-cart');
   const selecao = document.querySelector('.items');
   btnClear.addEventListener('click', btnEsvazia);
-  selecao.addEventListener('click', botaoCarrinho);
   selecao.addEventListener('click', saveStorage);
+  selecao.addEventListener('click', botaoCarrinho);
 };
 
 window.onload = () => {
