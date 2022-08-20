@@ -57,7 +57,15 @@ const botaoCarrinho = async (event) => {
   const { id, title, price } = arqv;
   const destruction = createCartItemElement({ sku: id, name: title, salePrice: price });
   carrinhoOl.appendChild(destruction);
-  saveCartItems(carrinhoOl.children.innerHTML);
+};
+
+const saveStorage = async () => {
+  const itemsCar = await carrinhoOl.innerHTML;
+  await saveCartItems(itemsCar);
+};
+ 
+const getSaveStorage = async () => {
+  carrinhoOl.innerHTML = await getSavedCartItems();
 };
 
 const btnEsvazia = () => {
@@ -69,9 +77,11 @@ const addEvent = () => {
   const selecao = document.querySelector('.items');
   btnClear.addEventListener('click', btnEsvazia);
   selecao.addEventListener('click', botaoCarrinho);
+  selecao.addEventListener('click', saveStorage);
 };
 
 window.onload = () => {
   criarProduto();
   addEvent();
+  getSaveStorage();
 };
