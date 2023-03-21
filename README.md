@@ -66,15 +66,15 @@
 <!-- SOBRE O PROJETO -->
 ## Sobre o projeto
 
-Foi desenvolvido um  carrinho de compras totalmente dinâmico! shopping_cart
+Foi desenvolvido um  carrinho de compras totalmente dinâmico! 
 
-Para isso, a aplicação está consumindo dados diretamente de uma API! star_struck
+Para isso, a aplicação está consumindo dados diretamente de uma API!
 
-Isso mesmo! Da sigla em inglês Application Programming Interface, uma API é um ponto de contato na internet com determinado serviço e nesse projeto está sendo utilizado a API do Mercado Livre para buscar produtos à venda. label
+Isso mesmo! Da sigla em inglês Application Programming Interface, uma API é um ponto de contato na internet com determinado serviço e nesse projeto está sendo utilizado a API do Mercado Livre para buscar produtos à venda.
 
-E não para por aí! star_struck
+E não para por aí!
 
-Este projeto foi pensado no desenvolvimento orientado a testes, o famoso TDD (Test Driven Development)! Que ajuda a garantir um código de qualidade, percebendo os casos de uso da aplicação e garantindo que ela está funcionando da maneira correta! rocket
+Este projeto foi pensado no desenvolvimento orientado a testes, o famoso TDD (Test Driven Development)! Que ajuda a garantir um código de qualidade, percebendo os casos de uso da aplicação e garantindo que ela está funcionando da maneira correta!
 
 
 <p align="right">(<a href="#readme-top">de volta para o topo</a>)</p>
@@ -82,7 +82,6 @@ Este projeto foi pensado no desenvolvimento orientado a testes, o famoso TDD (Te
 
 
 ### Construído com
-* <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original-wordmark.svg" alt="react" width="50" height="50"/>
 * <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" alt="java-script" width="50" height="50"/>
 * <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-plain-wordmark.svg" alt="css" width="50" height="50"/>
 * <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-plain-wordmark.svg" alt="html" width="50" height="50"/>
